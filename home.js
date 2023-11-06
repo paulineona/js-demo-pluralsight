@@ -189,6 +189,25 @@ button.addEventListener('click', function () {
 
 const values = ['a', 'b', 'c'];
 
-console.log(Array.isArray(values));
+// console.log(Array.isArray(values));
+// console.log(values[0]); //a
+// console.log(values[1]); //b
+// console.log(values[2]); //c
+// console.log(values[3]); //undefined
 
+//push -- add to the end of the array
+values.push('d', 'e', 'f');
+console.log(values); // d
 
+//pop -- remove from the end of the array
+const last = values.pop();
+console.log(last); // d
+console.log(values); // a,b,c
+
+//shift -- remove from the beginning of the array
+const first = values.shift();
+console.log(first); // a
+
+//unshift --  add to the beginning of the array
+values.unshift('a');
+console.log(values); // a,b,c

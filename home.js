@@ -1,3 +1,5 @@
+'use strict';
+
 // let person = {
 //     firstName: 'John',
 //     lastName: 'Doe'
@@ -253,3 +255,31 @@ values.forEach(function (item) {
 const containers = document.getElementsByClassName('container');
 //containers[0].classList.add('d-none');   add class d-none to the first container to hide it
 console.log(containers); // HTMLCollection(2) [div.container, div.container]
+
+// Scope and Hoisting
+
+//single object 
+// const app = {
+//     // productId: 12345,
+//     userName: 'John Doe',
+//     orderNumber: 789
+// };
+
+// function showProductId() {
+//     let productId = 1234;
+//     console.log(productId);
+// }
+
+// console.log(productId);
+// showProductId(); // 1234    
+
+// productId = 456;
+
+// console.log(productId);
+
+// var productId = 1234;
+
+
+productId = 456;
+
+console.log(window.productId);

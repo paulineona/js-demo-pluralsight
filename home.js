@@ -196,7 +196,7 @@ const values = ['a', 'b', 'c'];
 // console.log(values[3]); //undefined
 
 //push -- add to the end of the array
-values.push('d', 'e', 'f');
+values.push('d');
 console.log(values); // d
 
 //pop -- remove from the end of the array
@@ -211,3 +211,45 @@ console.log(first); // a
 //unshift --  add to the beginning of the array
 values.unshift('a');
 console.log(values); // a,b,c
+
+//slice -- copy parts of an array
+const newValues = values.slice(1, 2);
+console.log(newValues); // b
+
+//splice -- remove or replace existing elements and/or add new elements
+// values.splice(1, 0, 'foo');
+console.log(values); // a,foo,b,c
+
+
+//indexOf -- find the index of an item in the array
+
+console.log(values.indexOf('c')); // 1
+console.log(values.indexOf('d')); // 1
+
+//filter -- create a new array with only elements that pass a test that you include as a function
+
+const set = values.filter(function (item) {
+    return item > 'b';
+});
+
+console.log(set); // c
+
+//find -- returns the first item that passes a test that you include as a function
+
+const values1 = ['a', 'bbb', 'c'];
+const found = values1.find(function (item) {
+    return item.length > 1;
+});
+
+console.log(found); // bbb
+
+// forEach -- calls a function for each element in the array
+values.forEach(function (item) {
+    console.log(item);
+});
+
+//Arrays in DOM
+
+const containers = document.getElementsByClassName('container');
+//containers[0].classList.add('d-none');   add class d-none to the first container to hide it
+console.log(containers); // HTMLCollection(2) [div.container, div.container]
